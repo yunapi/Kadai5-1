@@ -26,6 +26,15 @@ public class SujiHenkan {
 		else if(n==10) str = "ten";
 		else if(n==11) str = "eleven";
 		else if(n==12) str = "twelve";
+		else if(n==13) str = "thirteen";
+		else if(n==14) str = "fourteen";
+		else if(n==15) str = "fifteen";
+		else if(n==16) str = "sixteen";
+		else if(n==17) str = "seventeen";
+		else if(n==18) str = "eighteen";
+		else if(n==19) str = "nineteen";
+		else if(n==20) str = "twenty";
+		
 		return str;
 	}		
 }
