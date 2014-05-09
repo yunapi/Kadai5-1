@@ -12,8 +12,11 @@ public class SujiHenkan {
 	}	
 
 	static String translateEng(int n) {
+		
+		String i[]={"zero","one","two","three","four","five","six","seven","eight","nine"};
+		
 		String str = " ";
-		if(n==0) str = "zero";
+		/*if(n==0) str = "zero";
 		else if(n==1) str = "one";
 		else if(n==2) str = "two";
 		else if(n==3) str = "three";
@@ -22,8 +25,8 @@ public class SujiHenkan {
 		else if(n==6) str = "six";
 		else if(n==7) str = "seven";
 		else if(n==8) str = "eight";
-		else if(n==9) str = "nine";
-		else if(n==10) str = "ten";
+		else if(n==9) str = "nine"; */
+		if(n==10) str = "ten";
 		else if(n==11) str = "eleven";
 		else if(n==12) str = "twelve";
 		else if(n==13) str = "thirteen";
@@ -34,7 +37,8 @@ public class SujiHenkan {
 		else if(n==18) str = "eighteen";
 		else if(n==19) str = "nineteen";
 		else if(n==20) str = "twenty";
-		
+		else if(n>20 && n<30) str="twenty "+i[n-20];
+		else if(n>30 && n<40) str="thirty" +i[n-30];		
 		return str;
 	}		
 }
