@@ -35,12 +35,12 @@ public class SujiHenkan {
 		else if(n==90) str="ninety";
 		else if(n>90 && n<100) str="ninety-" +i[n-90];
 		else if(n==100) str="one hundred";
-		else if(n>100 && n<=120) str="one hundred-"+i[n-100];
-		else if(n>120 && n<1000)
-			str=translateEng1(n);
 		
-			
-			return str;
+		else if(n>100 && n<=1000)
+			str=translateEng1(n);
+		else if(n>1000 && n<=10000)
+		str=translateEng2(n);
+		return str;
 	}
 	
 	
@@ -48,7 +48,7 @@ public class SujiHenkan {
 
 		String str2="";
 		
-		if(n>120 && n<200)
+		if(n>100 && n<200)
 	    str2="one hundred-"+translateEng(n-100);
 	    else if(n==200)
 	    str2="two hundred";
@@ -82,10 +82,56 @@ public class SujiHenkan {
 	    	str2="nine hundred";
 	    else if(n>900 && n<1000)
 	    	str2="ninehundred-"+translateEng(n-900);
+	    else if(n==1000)
+	    	str2="one thousand";
 	    
 	    	
 	    return str2;
 	
+	}
+	
+	static String translateEng2(int n) {
+		String str3="";
+		if(n>1000 && n<2000)
+		    str3="one thousand-"+translateEng1(n-1000);
+		else if(n==2000)
+			str3 ="two thousand";
+		if(n>2000 && n<3000)
+		    str3="two thousand-"+translateEng1(n-2000);
+		else if(n==3000)
+			str3 ="three thousand";
+		if(n>3000 && n<4000)
+		    str3="three thousand-"+translateEng1(n-3000);
+		else if(n==4000)
+			str3 ="four thousand";
+		if(n>4000 && n<5000)
+		    str3="four thousand-"+translateEng1(n-4000);
+		else if(n==5000)
+			str3 ="five thousand";
+		if(n>5000 && n<6000)
+		    str3="five thousand-"+translateEng1(n-5000);
+		else if(n==6000)
+			str3 ="six thousand";
+		if(n>6000 && n<7000)
+		    str3="seven thousand-"+translateEng1(n-6000);
+		else if(n==7000)
+			str3 ="seven thousand";
+		if(n>7000 && n<8000)
+		    str3="seven thousand-"+translateEng1(n-7000);
+		else if(n==8000)
+			str3 ="eight thousand";
+		if(n>8000 && n<9000)
+		    str3="eight thousand-"+translateEng1(n-8000);
+		else if(n==9000)
+			str3 ="nine thousand";
+		if(n>9000 && n<10000)
+		    str3="nine thousand-"+translateEng1(n-9000);
+		else if(n==10000)
+			str3 ="one milion";
+		
+		
+		return str3;
+		
 	}
 	
 	
