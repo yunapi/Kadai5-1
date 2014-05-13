@@ -13,32 +13,20 @@ public class SujiHenkan {
 
 	static String translateEng(int n) {
 		
-		String i[]={"zero","one","two","three","four","five","six","seven","eight","nine"};
+		String i[]={"zero","one","two","three","four","five","six","seven","eight","nine","ten","eleven","twelve","thirteen","forteen","fifteen","sixteen","seventeen","eighteen","nineteen","twelve"};
+		
 		
 		String str = " ";
-		/*if(n==0) str = "zero";
-		else if(n==1) str = "one";
-		else if(n==2) str = "two";
-		else if(n==3) str = "three";
-		else if(n==4) str = "four";
-		else if(n==5) str = "five";
-		else if(n==6) str = "six";
-		else if(n==7) str = "seven";
-		else if(n==8) str = "eight";
-		else if(n==9) str = "nine"; */
-		if(n==10) str = "ten";
-		else if(n==11) str = "eleven";
-		else if(n==12) str = "twelve";
-		else if(n==13) str = "thirteen";
-		else if(n==14) str = "fourteen";
-		else if(n==15) str = "fifteen";
-		else if(n==16) str = "sixteen";
-		else if(n==17) str = "seventeen";
-		else if(n==18) str = "eighteen";
-		else if(n==19) str = "nineteen";
-		else if(n==20) str = "twenty";
-		else if(n>20 && n<30) str="twenty "+i[n-20];
-		else if(n>30 && n<40) str="thirty" +i[n-30];		
+		if(n<20) str = i[n];
+		if(n>20 && n<30) str="twenty-"+i[n-20];
+		else if(n>30 && n<40) str="thirty-" +i[n-30];
+		else if(n>40 && n<50) str="forty-" +i[n-40];
+		else if(n>50 && n<60) str="fifty-" +i[n-50];
+		else if(n>60 && n<70) str="sixty-" +i[n-60];
+		else if(n>70 && n<80) str="seventy-" +i[n-70];
+		else if(n>80 && n<90) str="eighty-" +i[n-80];
+		else if(n>90 && n<100) str="ninety-" +i[n-90];
+		else if(n>100 && n<120) str="one hundred-" + i[n-100];
 		return str;
 	}		
 }
